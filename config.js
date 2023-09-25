@@ -4,13 +4,13 @@ import { watchFile, unwatchFile, readFileSync } from 'fs'
 
 global.owner = 
  [
-  ['+91 6235 050 956', '𝖑𝖚𝖆 𝖘𝖊𝖗 𝖔𝖋𝖈', true]
+  ['+2347018087851', '𝐷𝛯𝛮𝛮𝛪𝑆 𝐵𝛩𝑇', true]
 ]
 // Put your number here
 // [number, he creator/owner?, he developer?]
 
 global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
+global.prems = [2347018087851] // Premium user has unlimited limit
 
 // api key here okay
 global.xyro = 'LyrK9JMI7N' // https://api.xyroinee.xyz free limit unlimited
@@ -35,16 +35,16 @@ global.APIKeys = { // APIKey Here
 ]
 
 // Sticker WM
-global.packname = `「 Cʀᴇᴀᴛᴇᴅ Bʏ 𝖑𝖚𝖆 𝖘𝖊𝖗 𝖔𝖋𝖈 」`
-global.author = ''
+global.packname = `「 Cʀᴇᴀᴛᴇᴅ Bʏ 𝐷𝛯𝛮𝛮𝛪𝑆  」`
+global.author = '𝐷𝛯𝛮𝛮𝛪𝑆 𝐵𝛩𝑇'
 global.thumb = readFileSync('./me.png')
 global.thumb2 = readFileSync('./me2.jpeg')
 global.multiplier = 69 // The higher, The harder levelup
 
 //Text here
-global.me = 'Cʀᴇᴀᴛᴇᴅ Bʏ 𝖑𝖚𝖆 𝖘𝖊𝖗 𝖔𝖋𝖈 - 2023'
-global.bott = 'zoro md'
-global.nomorown = '916235050956'
+global.me = 'Cʀᴇᴀᴛᴇᴅ Bʏ 𝐷𝛯𝛮𝛮𝛪𝑆 - 2023'
+global.bott = 'dennis md'
+global.nomorown = '2347018087851'
 // owner put this creator.js
 global.str = '-------------'
 global.l = '「'
