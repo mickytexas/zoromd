@@ -50,13 +50,13 @@ export async function handler(chatUpdate) {
             if (typeof user !== 'object') global.db.data.users[m.sender] = {}
             if (user) {
                 if (!isNumber(user.exp)) user.exp = 0
-                if (!isNumber(user.limit)) user.limit = 100
+                if (!isNumber(user.limit)) user.limit = 1000000
                 if (!isNumber(user.afk)) user.afk = -1
                 if (!('afkReason' in user)) user.afkReason = ''
                 if (!('banned' in user)) user.banned = false
              } else global.db.data.users[m.sender] = {
-                exp: 0,
-                limit: 100,
+                exp: 99999877,
+                limit: 100000000000,
                 afk: -1,
                 afkReason: '',
                 banned: false
@@ -67,7 +67,7 @@ export async function handler(chatUpdate) {
                 if (chat) {
 	                if (!('isBanned' in chat)) chat.isBanned = false
 	                if (!('welcome' in chat)) chat.welcome = false
-	                if (!('detect' in chat)) chat.detect = false
+	                if (!('detect' in chat)) chat.detect = true
 	                if (!('sWelcome' in chat)) chat.sWelcome = ''
 	                if (!('sBye' in chat)) chat.sBye = ''
 	                if (!('sPromote' in chat)) chat.sPromote = ''
@@ -265,8 +265,8 @@ export async function handler(chatUpdate) {
                     continue
                 }
                 m.isCommand = true
-                let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
-                // if (xp > 200) m.reply('Ngecit -_-') // Hehehe
+                let xp = 'exp' in plugin ? parseInt(plugin.exp) : 1700000 // XP Earning per command
+                // if (xp > 999999999999) m.reply() //
                 // else m.exp += xp
                 if (xp) m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
@@ -401,7 +401,7 @@ export async function participantsUpdate({
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-						let pp = 'https://telegra.ph/file/24fa902ead26340f3df2c.png'
+						let pp = 'https://i.imgur.com/SvoILq6.jpeg'
 						let gcname = groupMetadata.subject
 						try {
 							pp = await this.profilePictureUrl(user, 'image')
@@ -416,10 +416,10 @@ text: text,
 contextInfo: {
 mentionedJid: [user],
 externalAdReply: {
-title: "© Zoro MD",
+title: "© Dennis MD",
 body: "Group Notifications",
 thumbnailUrl: pp,
-sourceUrl: 'https://whatsapp.com/channel/0029Va4gIsn3WHTcFh97VU3s',
+sourceUrl: 'https://whatsapp.com/channel/0029Va5PPOV3mFYF646ZaD2y',
 mediaType: 1,
 renderLargerThumbnail: true
 }}})
